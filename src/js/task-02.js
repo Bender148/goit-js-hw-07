@@ -11,9 +11,9 @@ const ingredients = [
   const ingredientsList = document.getElementById("ingredients");
   console.log(ingredientsList);
   
-  const ingredientsItems = ingredients.map((el) => {
+  const ingredientsItems = ingredients.map((element) => {
     const item = document.createElement("li");
-    item.textContent = el;
+    item.textContent = element;
     return item;
   });
 

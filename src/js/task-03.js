@@ -17,26 +17,26 @@ const images = [
     },
   ];
 
-  const galleryList = document.getElementById("gallery");
+  const imageList = document.getElementById("gallery");
   
-  function createGalleryItem({ url, alt }) {
+  function createImageItem({ url, alt }) {
     return `<li class="gallery-item">
         <img src="${url}" alt="${alt}" width="400">
       </li>`;
   }
   
-  const galleryMarkup = images.reduce(
-    (markup, item) => markup + createGalleryItem(item),
+  const imageMarkup = images.reduce(
+    (markup, item) => markup + createImageItem(item),
     ""
   );
   
-  galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
+  imageList.insertAdjacentHTML("afterbegin", imageMarkup);
   
-  galleryList.style.display = "flex";
-  galleryList.style.justifyContent = "space-around";
+  imageList.style.display = "flex";
+  imageList.style.justifyContent = "space-around";
   
-  const galleryItems = document.querySelectorAll(".gallery-item");
-  galleryItems.forEach((el) => {
+  const imageItems = document.querySelectorAll(".gallery-item");
+  imageItems.forEach((el) => {
     el.style.border = "2px solid green";
     el.style.borderRadius = "7px";
     el.style.width = "400px";
